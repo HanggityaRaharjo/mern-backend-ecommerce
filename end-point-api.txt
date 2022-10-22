@@ -48,6 +48,25 @@ err-response :
 GROUP : Product
 
 [1] - Create Product
+{root.api}/{version}/product/register
+
+req :
+{
+    "name" : "example",
+    "email" : "example@gmail.com",
+    "password" : "pass123",
+}
+
+res :
+{
+    "message" : "Register Success",
+    "data" : {
+        "id" : 1,
+        "name" : "example",
+        "email" : "example@gmail.com",
+        "password" : "pass123",
+    }
+}
 [2] - Get Product
 [3] - Update Product
 [4] - Delete Product
