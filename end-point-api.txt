@@ -1,0 +1,53 @@
+Standart API
+
+{root.api}/{version}/{grouping}/{endpoint}
+SAMPLE:
+http://mern-api.ecommerce.com/v1/auth/login
+
+
+Standart Status Response
+[1] 200 - OK                        (GET API SUCCESS)
+[2] 201 - CREATED                   (CREATED POST API)
+[3] 400 - BAD REQUEST               (CLIENT INPUT ERROR)
+[4] 401 - UNAUTHORIZED              (CLIENT NOT AUTHORIZED TO THE REQUEST)
+[5] 403 - FORBIDDEN                 (CLIENT NOT ALLOWED TO ACCESS)
+[6] 404 - NOT FOUND                 (REQUEST ENDPOINT NOT FOUND)
+[7] 500 - INTERNAL SERVER ERROR     (REQUEST ENDPOINT NOT FOUND)
+[8] 502 - BAD GATEWAY               (INVALID RESPONSE FROM ANOTHER REQUEST)
+
+GROUP : Authentication
+
+[1] - Register
+{root.api}/{version}/auth/register
+
+req :
+{
+    "name" : "example",
+    "email" : "example@gmail.com",
+    "password" : "pass123",
+}
+
+res :
+{
+    "message" : "Register Success",
+    "data" : {
+        "id" : 1,
+        "name" : "example",
+        "email" : "example@gmail.com",
+        "password" : "pass123",
+    }
+}
+
+err-response :
+400 -> yang di inputkan client tidak sesuai
+
+[2] - Login
+{root.api}/{version}/auth/login
+
+
+GROUP : Product
+
+[1] - Create Product
+[2] - Get Product
+[3] - Update Product
+[4] - Delete Product

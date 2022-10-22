@@ -1,14 +1,16 @@
 exports.storeProduct = (req, res, next) => {
-  res.json(
-    {
-        message: 'Create Product Success',
-        data:{
-            id:1,
-            name:'Jaket Hoodie',
-            price:175000,
+    const name = req.body.name;
+    const price = req.body.price;
+    res.json(
+        {
+            message: 'Create Product Success!',
+            data:{
+                id:1,
+                name:name,
+                price:price,
+            }
         }
-    }
-  );
+    );
   next();
 };
 
